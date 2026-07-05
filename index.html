@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aleyna Cura | Kişisel Web Sitesi</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #111827);
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      color: #93c5fd;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #dbeafe;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 8px;
+      background: #2563eb;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #60a5fa;
+      transform: translateY(-4px);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 30px 20px;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #93c5fd;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .about p {
+      font-size: 18px;
+      color: #e2e8f0;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .skill h3 {
+      margin-bottom: 10px;
+      color: #bfdbfe;
+    }
+
+    .bar {
+      width: 100%;
+      height: 10px;
+      background: #334155;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #2563eb, #60a5fa);
+    }
+
+    .project h3,
+    .certificate h3 {
+      color: #bfdbfe;
+      margin-bottom: 10px;
+    }
+
+    .project p,
+    .certificate p {
+      color: #cbd5e1;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    .contact a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Aleyna Cura</h1>
+      <h2>Yönetim Bilişim Sistemleri Öğrencisi</h2>
+      <p>
+        Veri analizi, iş süreçleri, proje yönetimi ve dijital sistemler alanlarında
+        kendini geliştiren; teknoloji ile işletme bakış açısını birleştirmeyi hedefleyen
+        bir YBS öğrencisiyim.
+      </p>
+
+      <div class="buttons">
+        <a href="#projeler" class="btn">Projelerim</a>
+        <a href="#iletisim" class="btn">İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#yetenekler">Yetenekler</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#sertifikalar">Sertifikalar</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+
+  <section id="hakkimda" class="about">
+    <h2 class="section-title">Hakkımda</h2>
+    <div class="card">
+      <p>
+        Merhaba, ben Aleyna Cura. Yönetim Bilişim Sistemleri öğrencisiyim.
+        İşletme, bilişim sistemleri, veri analizi ve dijital dönüşüm alanlarına ilgi duyuyorum.
+        Akademik hayatımda edindiğim bilgileri projelerle destekleyerek kendimi hem teknik
+        hem de analitik yönden geliştirmeyi amaçlıyorum.
+      </p>
+    </div>
+  </section>
+
+  <section id="yetenekler">
+    <h2 class="section-title">Yetenekler</h2>
+
+    <div class="skills-grid">
+      <div class="skill">
+        <h3>SQL</h3>
+        <div class="bar"><span style="width:75%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h3>Python</h3>
+        <div class="bar"><span style="width:60%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h3>C#</h3>
+        <div class="bar"><span style="width:55%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h3>Excel</h3>
+        <div class="bar"><span style="width:80%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h3>Veri Analizi</h3>
+        <div class="bar"><span style="width:70%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h3>Proje Yönetimi</h3>
+        <div class="bar"><span style="width:75%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projeler">
+    <h2 class="section-title">Projeler</h2>
+
+    <div class="projects-grid">
+      <div class="card project">
+        <h3>Kütüphane Yönetim Sistemi</h3>
+        <p>
+          C# ile nesne tabanlı programlama mantığı kullanılarak hazırlanmış
+          temel bir kütüphane yönetim sistemi projesi.
+        </p>
+      </div>
+
+      <div class="card project">
+        <h3>Veri Analizi Çalışmaları</h3>
+        <p>
+          SQL, Excel ve Python kullanarak veri düzenleme, analiz etme
+          ve raporlama üzerine yapılan çalışmalar.
+        </p>
+      </div>
+
+      <div class="card project">
+        <h3>Pazar Araştırması</h3>
+        <p>
+          Hedef kitle, pazar analizi ve stratejik değerlendirme üzerine
+          hazırlanmış araştırma çalışmaları.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sertifikalar">
+    <h2 class="section-title">Sertifikalar</h2>
+
+    <div class="certificates-grid">
+      <div class="card certificate">
+        <h3>Proje ve Risk Yönetimi</h3>
+        <p>
+          Proje planlama, risk analizi ve süreç yönetimi alanlarında edinilen temel bilgiler.
+        </p>
+      </div>
+
+      <div class="card certificate">
+        <h3>Pazar Araştırması ve Stratejileri</h3>
+        <p>
+          Pazar analizi, hedef kitle belirleme ve strateji geliştirme üzerine kazanımlar.
+        </p>
+      </div>
+
+      <div class="card certificate">
+        <h3>Üretim Yönetimi</h3>
+        <p>
+          Üretim süreçleri, verimlilik ve operasyon yönetimi üzerine akademik çalışmalar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim" class="contact">
+    <h2 class="section-title">İletişim</h2>
+
+    <div class="card">
+      <p>
+        📧 E-posta:
+        <a href="mailto:aleynacura27@gmail.com">aleynacura27@gmail.com</a>
+      </p>
+
+      <p>
+        💼 LinkedIn:
+        <a href="https://www.linkedin.com/in/aleyna-cura-26b11a1a8/" target="_blank">
+          linkedin.com/in/aleyna-cura-26b11a1a8
+        </a>
+      </p>
+
+      <p>
+        💻 GitHub:
+        <a href="https://github.com/aleynaacura" target="_blank">
+          github.com/aleynaacura
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Aleyna Cura | Kişisel Web Sitesi</p>
+  </footer>
+
+</body>
+</html>
+
